@@ -1,0 +1,8 @@
+{% extends "layout.html" %} {% block content %}
+<form method="POST" action="{{ url_for('login') }}">
+    <input type="text" name="username" placeholder="Login" required>
+    <input type="password" name="password" placeholder="Hasło" required>
+    <button type="submit">Zaloguj</button>
+</form>
+
+{% endblock %}
