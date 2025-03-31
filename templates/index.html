@@ -1,4 +1,9 @@
 {% extends "layout.html" %} {% block content %}
-<h3>Witaj na Inspiroy Systems</h3>
+{% if session['username'] %}
+    <h3>Witaj na Inspiroy Systems! {{session['username']}}</h3>
+{% else %}
+    <h3>Witaj na Inspiroy Systems! Gość</h3>
+
+{% endif %}
 
 {% endblock %}

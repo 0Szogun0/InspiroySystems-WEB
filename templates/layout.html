@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>{{title}}</title>
     <nav>
         <h1>Inspiroy Systems</h1>
-
+        {% if session['username'] %}
+            Zalogowano jako: {{session['username']}}
+            <a href="{{ url_for('logout') }}">Wyloguj</a>
+        {% else %}
+        <a href="{{ url_for('login') }}">Zaloguj</a>
+        <a href="{{ url_for('register') }}">Zarejestruj</a>
+        {% endif %}
     </nav>
+
+    
 </head>
 <body>
     {% block content %}{% endblock %}
