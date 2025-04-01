@@ -90,7 +90,7 @@ def register():
 def login():
     if request.method == "POST":
         username = request.form.get("username")
-        password = request.form.get ("password")d
+        password = request.form.get ("password")
         conn = sqlite3.connect('moja_baza.db')
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, password))
