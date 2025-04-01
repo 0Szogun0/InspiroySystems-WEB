@@ -25,7 +25,6 @@ app.secret_key = 'supersecretkey'
 def main():
     return render_template("index.html", title="Strona Główna")
 
-<<<<<<< HEAD
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -51,11 +50,11 @@ def register():
 
 
 
-=======
+
 @app.route("/loginform")
 def loginform():
     return render_template("loginform.html", title="Logowanie do systemu INSPIROY")
->>>>>>> 96e7bfdd565188b0244fe5475352fe6248b9c7dc
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
