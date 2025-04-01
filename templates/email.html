@@ -1,0 +1,36 @@
+<!-- templates/email_template.html -->
+<html>
+<head>
+    <style>
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        .container {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>{{ subject }}</h2>
+        <p>{{ body }}</p>
+        <br>
+        <a href="{{ button_url }}" class="button">Kliknij tutaj!</a>
+    </div>
+</body>
+</html>
