@@ -87,6 +87,18 @@ def register():
     return render_template("registerform.html", title="Rejestracja do systemu INSPIROY")
 
 
+
+
+
+
+
+
+@app.route("/loginform")
+def loginform():
+    return render_template("loginform.html", title="Logowanie do systemu INSPIROY")
+
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
